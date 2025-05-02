@@ -43,3 +43,9 @@ clean:
 
 test:
 	nosetests --verbose --with-coverage --cover-package=garminexport --cover-branches
+
+install:
+	@echo "+ $@"
+	poetry run python -m pip install -U pip
+	poetry install
+	@echo "$@ Done."
